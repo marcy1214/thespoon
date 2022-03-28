@@ -1,4 +1,6 @@
 <h1>All restaurants</h1>
+<%= cl_image_tag("https://res.cloudinary.com/dsnxchapu/image/upload/v1648480599/restaurants_ureji4.jpg",
+      width: 400, height: 300, crop: :fill) %>
 <ul>
   <%= link_to 'create new restaurant', new_restaurant_path %>
   <% @restaurants.each do |restaurant| %>
