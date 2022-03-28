@@ -1,7 +1,10 @@
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.rating %></p>
-<%= cl_image_tag @restaurant.photo.key %>
+<% @restaurant.photos.each do |photo| %>
+  <%= cl_image_tag photo.key %>
+<% end %>
+
 <% @restaurant.reviews.each do |review| %>
   <p><%= review.content %></p>
 <%end %>
